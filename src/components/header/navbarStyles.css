@@ -1,0 +1,84 @@
+.navigation {
+  height: 60px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 0.5rem 0rem;
+  background-color: #fff;
+  color: black;
+  box-shadow: 0 2px 2px 2px rgba(9, 9, 9, 0.23);
+}
+.brand-name {
+  margin-left: 2rem;
+}
+.logo {
+  background-color: rgb(150, 216, 172);
+  border-radius: 50%;
+}
+.navigation-menu {
+  margin-left: auto;
+}
+.navigation-menu ul {
+  display: flex;
+  padding: 1rem;
+}
+.navigation-menu li {
+  list-style-type: none;
+  margin: 0 1rem;
+}
+.navigation-menu li a {
+  text-decoration: none;
+  color: blue;
+  display: block;
+  width: 100%;
+}
+.navigation-menu li a:hover {
+  color: green;
+}
+
+.hamburger {
+  cursor: pointer;
+  position: absolute;
+  color: blue;
+  font-weight: bolder;
+  right: 25px;
+  display: none;
+}
+.hamburger:hover {
+  color: green;
+}
+
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+  .navigation-menu ul {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    height: calc(100vh - 77px);
+    background-color: white;
+    border-top: 1px solid black;
+  }
+  .navigation-menu li {
+    text-align: center;
+    margin: 0;
+  }
+  .navigation-menu li a {
+    color: black;
+    width: 100%;
+    padding: 1.5rem 0;
+  }
+  .navigation-menu li:hover {
+    background-color: #eee;
+  }
+  .navigation-menu ul {
+    display: none;
+  }
+  .navigation-menu.expanded ul {
+    display: block;
+  }
+}
