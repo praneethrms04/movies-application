@@ -11,9 +11,6 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   padding: 5px;
   grid-gap: 20px;
-  /* display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between; */
 }
 .grid-item {
   border-radius: 2%;
@@ -50,7 +47,7 @@
     text-align: center;
   }
   .poster {
-    padding-top: 10px;
+    padding-top: 50px;
     width: 60%;
     height: 70%;
   }
@@ -58,6 +55,7 @@
 @media screen and (max-width: 415px) {
   .container {
     width: 350px;
+    margin-top: 30px;
     text-align: start;
     padding-top: 40px;
   }
@@ -66,4 +64,3 @@
     grid-template-columns: 1fr;
   }
 }
-   

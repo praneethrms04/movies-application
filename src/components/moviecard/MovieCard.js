@@ -1,14 +1,21 @@
 import { img_300, unavailable } from "../../config/config";
 
-const MovieCard = ({ id, poster, title, date , handleGotoDetailPage}) => {
- 
+const MovieCard = ({
+  id,
+  poster,
+  title,
+  date,
+  media_type,
+  handleGotoDetailPage,
+  item,
+}) => {
   return (
     <>
       <div
         className="grid-item"
         id={id}
         onClick={() => {
-          handleGotoDetailPage(id);
+          handleGotoDetailPage(item, id);
         }}
       >
         <img

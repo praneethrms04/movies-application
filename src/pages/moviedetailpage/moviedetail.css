@@ -1,0 +1,39 @@
+.container-data {
+  padding-top: 80px;
+  justify-content: start;
+}
+.image-container {
+  padding-top: 40px;
+}
+.m-img {
+  width: 300px;
+  height: 350px;
+}
+.data {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.picture-title {
+  text-align: center;
+}
+.picture-overview {
+  text-align: start;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+@media screen and (max-width: 768px) {
+  .picture-title {
+    text-align: center;
+    font-size: medium;
+  }
+  .m-img {
+    width: 250px;
+    height: 350px;
+  }
+  .picture-overview {
+    text-align: start;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+}

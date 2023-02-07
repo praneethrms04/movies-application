@@ -105,3 +105,18 @@
     margin-left: 150px;
   }
 }
+
+@media screen and (max-width: 415px) {
+  .navigation {
+    top: 0px;
+  }
+  .navigation-menu li a {
+    color: black;
+    width: 100%;
+    padding: 1.5rem 0;
+  }
+  .form-search {
+    margin-bottom: 20px;
+    margin-left: 400px;
+  }
+}

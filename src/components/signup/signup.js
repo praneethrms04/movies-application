@@ -4,6 +4,7 @@ import { useState } from "react";
 import "./signup.css";
 
 const Signup = (props) => {
+  //onSignupSubmit
   const { onSignupSumbit, goToLogin } = props;
 
   const [userId, setUserId] = useState("");
@@ -15,6 +16,7 @@ const Signup = (props) => {
     e.preventDefault();
     const data = { userId, password, name, email };
     onSignupSumbit(data);
+    console.log(data)
   };
 
   return (
