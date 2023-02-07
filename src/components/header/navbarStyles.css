@@ -3,7 +3,7 @@
   width: 100%;
   display: flex;
   align-items: center;
-  position: relative;
+  position: fixed;
   padding: 0.5rem 0rem;
   background-color: #fff;
   color: black;
@@ -11,6 +11,24 @@
 }
 .brand-name {
   margin-left: 2rem;
+}
+.form-search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-left: 400px;
+}
+.btn-search {
+  padding: 12px;
+  margin-top: 17px;
+  border-radius: 20%;
+  border-color: #eee;
+  margin-left: 3px;
+}
+.btn-search:hover {
+  color: black;
+  background-color: rgb(186, 211, 224);
 }
 .logo {
   background-color: rgb(150, 216, 172);
@@ -80,5 +98,10 @@
   }
   .navigation-menu.expanded ul {
     display: block;
+  }
+  .form-search {
+    align-items: center;
+    margin-bottom: 20px;
+    margin-left: 150px;
   }
 }

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Navbar from "../../components/header/Navbar";
 import Login from "../../components/login/Login";
 import Signup from "../../components/signup/signup";
 import "./authentication.css";
@@ -12,12 +13,13 @@ const Authentication = () => {
     setShowSignup(true);
   };
   return (
-
     <div>
-    {
-      showSignup ? (<Signup goToLogin ={gotoLogin} />) : (<Login goToSignup={gotoSignup} />)
-    }
-      
+    <Navbar />
+      {showSignup ? (
+        <Signup goToLogin={gotoLogin} />
+      ) : (
+        <Login goToSignup={gotoSignup} />
+      )}
     </div>
   );
 };
