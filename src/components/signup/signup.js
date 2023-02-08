@@ -1,11 +1,9 @@
-import React from "react";
 import { useState } from "react";
-
 import "./signup.css";
 
 const Signup = (props) => {
   //onSignupSubmit
-  const { onSignupSumbit, goToLogin } = props;
+  const { goToLogin } = props;
 
   const [userId, setUserId] = useState("");
   const [password, setPassword] = useState("");
@@ -15,8 +13,9 @@ const Signup = (props) => {
   const submitHandler = (e) => {
     e.preventDefault();
     const data = { userId, password, name, email };
-    onSignupSumbit(data);
-    console.log(data)
+    alert("SignUp page is Not Working");
+    // onSignupSumbit(data);
+    console.log(data);
   };
 
   return (
@@ -56,11 +55,7 @@ const Signup = (props) => {
                 onChange={(e) => setEmail(e.target.value)}
               />
 
-              <input
-                type="button"
-                value="Sign Up"
-                className="login-btn"
-              />
+              <input type="button" value="Sign Up" className="login-btn" />
             </div>
             <div className="signup">
               Do you have an account ?

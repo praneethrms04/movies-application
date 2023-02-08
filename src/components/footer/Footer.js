@@ -1,14 +1,11 @@
 import React from "react";
 
+import "./footer.css";
 const Footer = () => {
   return (
-    <footer
-      style={{ backgroundColor: "#eee", color: "black", padding: "1rem" }}
-    >
+    <footer>
       <div>
-        <p style={{ textAlign: "center" }}>
-          Copyright &copy; Movies Application{" "}
-        </p>
+        <p className="copy-right">Copyright &copy; Movies Application </p>
       </div>
     </footer>
   );

@@ -1,3 +1,37 @@
+.main {
+  width: 100%;
+  height: 100vh;
+}
+.userlogin {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 10px 10px 0 0;
+}
+input {
+  height: 40px;
+  width: 75%;
+  color: black;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 15px;
+  margin-top: 20px;
+}
+::placeholder {
+  font-size: 16px;
+  text-align: center;
+}
+.login-btn {
+  background-color: rgb(67, 205, 67);
+}
+.signup {
+  margin-top: 25px;
+  font-family: verdana;
+}
+.pointer {
+  cursor: pointer;
+  color: blue;
+}
+
 .form-body-login {
   background-color: #eee;
   margin-top: 40px;
@@ -16,6 +50,14 @@
         margin-top: 50px;
         height: 330px;
         width: 300px;
-       
       }
+}
+
+@media screen and (max-width: 415px) {
+
+  .form-body-login {
+    margin-top: 0px;
+    /* height: 650px; */
+    width: 300px;
+  }
 }

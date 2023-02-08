@@ -4,7 +4,6 @@ import "./navbarStyles.css";
 
 const Navbar = (props) => {
   const { filterMoviesBySearch, hideSearch } = props;
-
   const [click, setClick] = useState(false);
   const [searchtext, setSearchText] = useState("");
 
@@ -12,7 +11,7 @@ const Navbar = (props) => {
 
   const searchFunction = (e) => {
     e.preventDefault();
-    console.log(searchtext);
+    // console.log(searchtext);
     filterMoviesBySearch(searchtext);
   };
 
@@ -40,7 +39,7 @@ const Navbar = (props) => {
               <a href="/">Home</a>
             </li>
             <li>
-              <a href="/contact">Contact</a>
+              <a href="/all-movies">Movies</a>
             </li>
             <li>
               <a href="/login">Login</a>

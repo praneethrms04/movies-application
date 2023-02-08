@@ -1,10 +1,14 @@
 .container {
-  padding-top: 130px;
+  padding-top: 100px;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
   text-align: start;
+}
+.heading {
+  text-align: center;
+  padding-bottom: 30px;
 }
 .grid-container {
   display: grid;
@@ -12,30 +16,13 @@
   padding: 5px;
   grid-gap: 20px;
 }
-.grid-item {
-  border-radius: 2%;
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 1px solid #eee;
-  font-size: 30px;
-  text-align: center;
-}
-.poster {
-  padding-top: 10px;
-  width: 60%;
-  height: 70%;
-}
-.movie-title {
-  font-size: 50%;
-  text-align: start;
-  margin-left: 60px;
-}
+
 
 @media screen and (max-width: 768px) {
   .container {
     width: 600px;
   }
   .grid-container {
-    /* display: grid; */
     grid-template-columns: 1fr 1fr;
     grid-gap: 10px;
   }
@@ -57,10 +44,14 @@
     width: 350px;
     margin-top: 30px;
     text-align: start;
-    padding-top: 40px;
+    padding-top: 50px;
+  }
+  .heading {
+    padding-bottom: 0px;
   }
   .grid-container {
     display: grid;
     grid-template-columns: 1fr;
+    padding: 25px;
   }
 }

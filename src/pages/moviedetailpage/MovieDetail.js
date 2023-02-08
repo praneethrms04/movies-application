@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import { Context } from "../../App";
 import { img_500, unavailable } from "../../config/config";
+import { Context } from "../../App";
 import Navbar from "../../components/header/Navbar";
 import Footer from "../../components/footer/Footer";
 

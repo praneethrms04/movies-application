@@ -1,14 +1,6 @@
 import { img_300, unavailable } from "../../config/config";
-
-const MovieCard = ({
-  id,
-  poster,
-  title,
-  date,
-  media_type,
-  handleGotoDetailPage,
-  item,
-}) => {
+import "./moviesCard.css";
+const MovieCard = ({ id, poster, title, date, handleGotoDetailPage, item }) => {
   return (
     <>
       <div

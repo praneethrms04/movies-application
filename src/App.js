@@ -1,6 +1,7 @@
 import React, { createContext, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Movies from "./pages/homepage/Movies";
+import AllMovies from "./pages/movies/AllMovies"
+import Movies from "./pages/homepage/TrendingMovies";
 import Authentication from "./pages/authentication/Authentication";
 import MovieDetail from "./pages/moviedetailpage/MovieDetail";
 import "./App.css";
@@ -15,6 +16,7 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Movies />} />
+            <Route path="/all-movies" element={<AllMovies />} />
             <Route path="/login" element={<Authentication />} />
             <Route path="/movie-detail/:id" element={<MovieDetail />} />
           </Routes>

@@ -1,58 +1,59 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
-import MovieCard from "../../components/moviecard/MovieCard";
-import { useNavigate } from "react-router-dom";
-import Navbar from "../../components/header/Navbar";
-import "./moviesStyles.css";
-import { Context } from "../../App";
 import { useContext } from "react";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import { Context } from "../../App";
+import MovieCard from "../../components/moviecard/MovieCard";
+import Navbar from "../../components/header/Navbar";
 import Footer from "../../components/footer/Footer";
-const Movies = () => {
+import "./moviesStyles.css";
+
+const TrendingMovies = () => {
   const navigate = useNavigate();
-  const [movies, setMovies] = useState([]);
+  const [trendingMovies, setAllTrendingMovies] = useState([]);
   const [allmovies, setAllMovies] = useState([]);
 
   const { setMovieDetail } = useContext(Context);
 
   const handleGotoDetailPage = (item, id) => {
     navigate(`/movie-detail/${id}`);
-    // console.log(item)
     setMovieDetail(item);
   };
 
-  const fetchMovies = async () => {
+  const fetchTrendingMovies = async () => {
     const url = `https://api.themoviedb.org/3/trending/all/day?api_key=${process.env.REACT_APP_API_KEY}`;
 
-    // const url = `
-    // https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_API_KEY}&
-    //   language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false`;
     try {
       const { data } = await axios.get(url);
       console.log(data.results);
-      setMovies(data.results);
+      setAllTrendingMovies(data.results);
       setAllMovies(data.results);
     } catch (error) {
       console.log(error);
     }
   };
   useEffect(() => {
-    fetchMovies();
+    fetchTrendingMovies();
     // eslint-disable-next-line
   }, []);
   const filterMoviesBySearch = (searchText) => {
     const filteredmovies = allmovies.filter((item) => {
       return item.name || item.title.toLowerCase().includes(searchText);
     });
-    setMovies(filteredmovies);
+    setAllTrendingMovies(filteredmovies);
   };
 
   return (
     <>
       <Navbar filterMoviesBySearch={filterMoviesBySearch} hideSearch={true} />
       <div className="container">
+        <div className="heading">
+          <h3>Trending Movies</h3>
+        </div>
+
         <div className="grid-container">
-          {movies &&
-            movies.map((item) => (
+          {trendingMovies &&
+            trendingMovies.map((item) => (
               <MovieCard
                 item={item}
                 key={item.id}
@@ -70,4 +71,4 @@ const Movies = () => {
   );
 };
 
-export default Movies;
+export default TrendingMovies;

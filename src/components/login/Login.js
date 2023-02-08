@@ -1,16 +1,16 @@
-import React from "react";
 import { useState } from "react";
 import "./login.css";
 
 const Login = (props) => {
-  const { onLoginSumbit, goToSignup } = props;
+  const { goToSignup } = props;
   const [userId, setUserId] = useState("");
   const [password, setPassword] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const data = { userId, password };
-    onLoginSumbit(data);
+    console.log(data);
+    // onLoginSumbit(data);
   };
 
   return (
